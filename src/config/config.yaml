@@ -1,0 +1,59 @@
+experiment:
+  name: ""  # Experiment name, corresponding to the directory under experiments/
+  random_seed: 42
+
+# SwanLab Configuration
+swanlab: true
+
+model:
+  name: ""
+  torch_dtype: "bfloat16"
+  device_map: null
+
+dataset:
+  name: "medqa"
+  num_eval: 100
+
+training:
+  continue_training: false
+  current_step: 0
+
+  use_lora: true
+  use_quant: false  
+  batch_size: 1
+  learning_rate: 0.000005  
+  num_iterations: 10 
+  steps_per_iteration: 5 # in one epoch
+  save_interval: 10 # steps
+
+  generation:
+    num_generations: 4
+    max_new_tokens: 256 
+    max_length_for_gather: 8192  
+    max_generate_iterations: 10   
+    temperature: 0.7
+    do_sample: True
+  
+  optimizer:
+    beta: 0.04
+    #beta: 0
+    mu: 1
+    epsilon: 0.1
+
+lora:
+  r: 8
+  lora_alpha: 32
+  target_modules:
+    - "q_proj"    # qwen
+    - "v_proj"    # qwen
+  lora_dropout: 0.1
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+qlora:
+  load_in_4bit: True          
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: "bfloat16"
+  bnb_4bit_use_double_quant: True   
+  load_in_8bit: False    # enable 8bit quantization
+  llm_int8_threshold: 6.0   # if load_in_8bit is True
