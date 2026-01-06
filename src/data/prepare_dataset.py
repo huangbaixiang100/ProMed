@@ -185,7 +185,7 @@ def prepare_dataset_medqa(split="train", eval_size=10, train_file=None, test_fil
     # If local file path is specified, use local file
     if test_file or train_file:
         # Set default data file paths
-        default_test_file = '/home/xiaobei/Agentic-RAG-R1__under-construction/src/data/medqa_train_atomic_data.jsonl'
+        default_test_file = 'src/data/medqa_train_atomic_data.jsonl'
         
         # Use provided file path or default path
         test_data_file = test_file if test_file else default_test_file
