@@ -1,6 +1,6 @@
 # ProMed: Shapley Information Gain Guided Reinforcement Learning for Proactive Medical LLMs
 
-Official Implementation of [ProMed: Shapley Information Gain Guided Reinforcement Learning for Proactive Medical LLMs](https://arxiv.org/pdf/2508.13514)
+Official Implementation of [ProMed: Shapley Information Gain Guided Reinforcement Learning for Proactive Medical LLMs]
 ProMed is a novel approach for enhancing medical LLMs' proactive information-seeking ability through Shapley information gain rewards and reinforcement learning frameworks to improve interactive diagnosis.
 
 ## 🎯 Key Features
@@ -286,17 +286,6 @@ Before training or evaluation, ensure all API keys are configured:
 The project uses DeepSpeed ZeRO-2 for distributed training:
 - Configured in `src/config/accelerate_config/train_zero2.yaml`
 - Supports multi-GPU training with automatic gradient synchronization
-
-## 📚 Citation
-If you use this code or find the paper useful, please cite:
-```bibtex
-@article{ding2025promed,
-  title={Promed: Shapley information gain guided reinforcement learning for proactive medical llms},
-  author={Ding, Hongxin and Huang, Baixiang and Fang, Yue and Liao, Weibin and Jiang, Xinke and Li, Zheng and Zhao, Junfeng and Wang, Yasha},
-  journal={arXiv preprint arXiv:2508.13514},
-  year={2025}
-}
-```
 
 
 ## 📄 License
