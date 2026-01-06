@@ -1,6 +1,6 @@
 # ProMed: Shapley Information Gain Guided Reinforcement Learning for Proactive Medical LLMs
 
-Official Implementation of [ProMed: Shapley Information Gain Guided Reinforcement Learning for Proactive Medical LLMs]
+Official Implementation of [ProMed: Shapley Information Gain Guided Reinforcement Learning for Proactive Medical LLMs].
 ProMed is a novel approach for enhancing medical LLMs' proactive information-seeking ability through Shapley information gain rewards and reinforcement learning frameworks to improve interactive diagnosis.
 
 ## 🎯 Key Features
